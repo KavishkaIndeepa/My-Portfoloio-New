@@ -149,3 +149,55 @@ header {
 .download-button:hover {
     background-color: #555;
 }
+
+/* education  */
+
+.education {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .education-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .education-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .degree {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .degree i {
+    margin-right: 10px;
+  }
+  
+  .institution {
+    color: #555;
+  }
+  
+  .date {
+    color: #888;
+  }

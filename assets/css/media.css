@@ -61,3 +61,12 @@
         padding: 15px;
     }
 }
+
+/* education  */
+
+@media screen and (max-width: 768px) {
+    .education-item {
+      flex: 0 0 100%; /* One item per row on smaller screens */
+      margin-right: 0;
+    }
+  }

@@ -70,3 +70,14 @@
       margin-right: 0;
     }
   }
+
+  /* skills  */
+  @media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack columns in a single column on smaller screens */
+    }
+
+    .col {
+        max-width: 100%; /* Allow columns to take full width on smaller screens */
+    }
+}

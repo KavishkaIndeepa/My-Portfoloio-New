@@ -7,6 +7,7 @@ html{
     scroll-behavior: smooth;
 }
 
+
 header {
     background-color: rgba(25, 24, 24, 0.7); /* Initial background color with transparency */
     color: #fff;
@@ -61,6 +62,7 @@ header {
 .home h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .home p {
@@ -148,6 +150,7 @@ header {
 
 .download-button:hover {
     background-color: #555;
+    transform: scale(1.05);
 }
 
 /* education  */
@@ -201,3 +204,208 @@ header {
   .date {
     color: #888;
   }
+
+  /* skils  */
+
+/* ===== SKILLS =====*/
+.skills__container {
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 90vw;
+   
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.col {
+    width: 100%; /* Adjust to your design needs */
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 2rem; /* Adjust spacing between columns */
+    padding: 1rem; /* Adjust padding */
+    background: rgba(242, 232, 232, 0.2);
+    background-color: #2c3e50; /* Set the background color for .row */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.skills__p {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills__p li {
+    color: #fff; /* Set text color to white */
+    margin-bottom: 0.5rem; /* Add some spacing between items if needed */
+}
+
+.skills__p li i {
+    margin-right: 1rem; /* Add margin between icon and text */
+}
+
+.skills__tag {
+    color: #ffffff;
+    text-align: center;
+}
+
+.skills__subtitle {
+    margin-bottom: var(--mb-2);
+}
+
+.skills__text {
+    margin-bottom: var(--mb-4);
+}
+
+.skills__data {
+    display: flex;
+    flex-direction: column; /* Adjust for smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: var(--font-semi);
+    padding: .5rem 1rem;
+    margin-bottom: var(--mb-4);
+    border-radius: .5rem;
+    box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+}
+
+.skills__icon {
+    font-size: 2rem;
+    margin-right: 2vw;
+    margin-bottom: var(--mb-2);
+    color: var(--first-color);
+}
+
+.skills__names {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Adjust spacing */
+}
+
+.skills__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--first-color);
+    height: .25rem;
+    border-radius: .5rem;
+    width: 100%; /* Fill the entire width */
+    z-index: var(--z-back);
+}
+
+.skills__html {
+    width: 95%;
+}
+
+.skills__css {
+    width: 85%;
+}
+
+.skills__js {
+    width: 65%;
+}
+
+.skills__ux {
+    width: 85%;
+}
+
+.skills__img {
+    border-radius: .5rem;
+    box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.792);
+}
+
+
+  /* projects  */
+
+  
+
+
+
+
+
+
+/* Gallery */
+
+
+
+
+
+
+
+
+
+/* contact */
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+.social-icons-contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons-contact a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3498db; /* Adjust the color if needed */
+    font-size: 2rem; /* Adjust the size of your icons */
+}
+
+
+/* footer */
+
+footer {
+    background-color: rgba(25, 24, 24, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

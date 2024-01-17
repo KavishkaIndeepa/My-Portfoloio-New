@@ -81,3 +81,11 @@
         max-width: 100%; /* Allow columns to take full width on smaller screens */
     }
 }
+
+/*projects*/
+
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}

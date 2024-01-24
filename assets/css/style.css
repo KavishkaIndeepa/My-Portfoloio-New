@@ -577,6 +577,10 @@ button:hover {
     margin-top: 20px;
 }
 
+.social-icons-contact a :hover{
+    color: #000000;
+}
+
 .social-icons-contact a {
     margin: 0 10px;
     text-decoration: none;

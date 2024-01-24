@@ -308,6 +308,10 @@
 
     </section>
 
+    <div id="loader">
+        <div></div>
+    </div>
+
 </main>
 
 <footer>
@@ -315,7 +319,13 @@
 </footer>
 
 
-<!--<link rel="stylesheet" href="./assets/js/jquery-3.7.0.min.js">-->
-<!--<link rel="stylesheet" href="./assets/js/script.js">-->
+<script>
+    let loader = document.getElementById("loader");
+        window.addEventListener("load", function () {
+            console.log("This message will print just after fully loading the website")
+            loader.style.display = 'none';
+        });
+</script>
+
 </body>
 </html>

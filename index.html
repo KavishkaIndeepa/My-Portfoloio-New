@@ -35,6 +35,14 @@
         <div class="nav-item"><a href="#contact" class="nav-link">Contact</a></div>
     </div>
 
+
+    <div id="theme-toggle">
+        <i id="light-mode-icon" class="fas fa-sun" style="color: white"></i>
+        <i id="dark-mode-icon" class="fas fa-moon" style="display: none; color: white"></i>
+    </div>
+
+    <div id="hamburger-icon" class="fas fa-bars"></div>
+
 </header>
 
 <main>
@@ -325,6 +333,64 @@
             console.log("This message will print just after fully loading the website")
             loader.style.display = 'none';
         });
+
+
+// modes
+
+const themeToggle = document.getElementById("theme-toggle");
+
+
+const elementsToSwitch = document.querySelectorAll(".switch-theme");
+
+
+themeToggle.addEventListener("click", function () {
+    elementsToSwitch.forEach((element) => {
+        element.classList.toggle("light-mode");
+        element.classList.toggle("dark-mode");
+    });
+
+   
+    const lightModeIcon = document.getElementById("light-mode-icon");
+    const darkModeIcon = document.getElementById("dark-mode-icon");
+    lightModeIcon.style.display = lightModeIcon.style.display === "none" ? "inline" : "none";
+    darkModeIcon.style.display = darkModeIcon.style.display === "none" ? "inline" : "none";
+
+   
+    const body = document.body;
+    if (body.classList.contains("dark-mode")) {
+        body.style.backgroundColor = "#262626"; // Dark background color
+        body.style.color = "#ffffff"; // White text color
+
+    } else {
+        body.style.backgroundColor = "#ffffff"; // Light background color
+        body.style.color = "#000000"; // Black text color
+    }
+});
+
+
+
+document.getElementById('hamburger-icon').addEventListener('click', function() {
+        var navDiv = document.querySelector('.nav-div');
+        navDiv.style.display = (navDiv.style.display === 'none' || navDiv.style.display === '') ? 'block' : 'none';
+    });
+
+    // Add this event listener to handle resizing
+    window.addEventListener('resize', function() {
+        var navDiv = document.querySelector('.nav-div');
+        var hamburgerIcon = document.getElementById('hamburger-icon');
+
+        // Check if the screen size is larger and reset the navigation visibility
+        if (window.innerWidth > 430) {
+            navDiv.style.display = 'flex'; // Display the regular navigation
+            hamburgerIcon.style.display = 'none'; // Hide the hamburger icon
+        } else {
+            navDiv.style.display = 'none'; // Hide the regular navigation
+            hamburgerIcon.style.display = 'block'; // Display the hamburger icon
+        }
+    });
+
+
+
 </script>
 
 </body>

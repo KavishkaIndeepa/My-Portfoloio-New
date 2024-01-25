@@ -620,7 +620,54 @@ footer {
     bottom: 0;
     right: 0;
     margin: auto;
-    background: url("/assets/img/loading.gif");
+    background: url("../img/loading.gif");
     background-size: cover;
     background-position: center;
+}
+
+/* modes */
+
+.light-mode {
+    /* Define your light mode styles */
+    background-color: white;
+    color: black;
+}
+
+/* CSS for Dark Mode */
+.dark-mode {
+    /* Define your dark mode styles */
+    background-color: #262626;
+    color: white;
+
+}
+#theme-toggle{
+    position: fixed;
+    right: 10px;
+}
+
+/* Hamburger */
+
+@media only screen and (max-width: 425px) {
+    .nav-div {
+        display: none; /* Hide regular navigation */
+    }
+
+    #hamburger-icon {
+        display: block; /* Show hamburger icon */
+        font-size: 24px; /* Adjust the size as needed */
+        cursor: pointer;
+        color: white;
+        margin-right: 10px; /* Add some spacing */
+    }
+}
+
+/* Additional styles for larger screens */
+@media only screen and (min-width:426px) {
+    #hamburger-icon {
+        display: none; /* Hide hamburger icon for larger screens */
+    }
+
+    .nav-div {
+        display: flex; /* Show regular navigation for larger screens */
+    }
 }

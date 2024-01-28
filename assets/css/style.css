@@ -36,6 +36,10 @@ header {
     font-weight: bold;
 }
 
+.nav-link:hover {
+    text-decoration: underline;
+}
+
 .main {
     padding: 20px;
 }

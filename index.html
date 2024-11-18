@@ -14,12 +14,13 @@
 
     <meta name="viewport" content="width=device-width initial-scale=1 minimum-scale=0.5 maximum-scale=2">
 
-    <link rel="icon" href="IMG-20220314-WA0013.jpg">
+    <link rel="icon" href="Home.JPG">
 
     <link rel="stylesheet" href="assets/fontAwsom/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
 </head>
@@ -46,7 +47,7 @@
 </header>
 
 <main>
-
+    
     <!-- home -->
 
     <section class="home" id="home">
@@ -65,9 +66,14 @@
                 <a href="https://wa.me/+94779796003" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
 
+
+
         </div>
 
+
     </section>
+
+<section class="container px-2">
 
     <!-- about -->
 
@@ -75,7 +81,7 @@
         <div class="about-section">
             <div class="about-content">
                 <div class="image-container">
-                    <img src="assets/img/kavishka.jpg" alt="Your Alt Text" class="about-image">
+                    <img src="assets/img/MY/About-me.JPG" alt="Your Alt Text" class="about-image">
                 </div>
                 <div class="text-area">
                     <h3>About Me</h3>
@@ -139,9 +145,9 @@
             <div class="col"> <!-- Second div -->
                 <h3 class="skills__tag">Programming Languages</h3>
                 <ul class="skills__p">
+                    <li><i class="fab fa-js"></i> TypeScript</li>
                     <li><i class="fab fa-java"></i> Java</li>
                     <li><i class="fab fa-js"></i> JavaScript</li>
-                    <li><i class="fab fa-js"></i> TypeScript</li>
                 </ul>
 
                 <h3 class="skills__tag">Database Management</h3>
@@ -155,16 +161,18 @@
                 <!-- Content of the third div goes here -->
                 <h3 class="skills__tag">Frameworks and Libraries</h3>
                 <ul class="skills__p">
+                    <li><i class="fab fa-react"></i> React</li>
+                    <li><i class="fab fa-angular"></i> Angular</li>
+                    <li><i class="fab fa-css3"></i> Tailwind CSS</li>
+                    <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
                     <li><i class="fab fa-node"></i> Node</li>
                     <li><i class="fab fa-js"></i> jQuery</li>
-                    <li><i class="fas fa-code"></i> Regular Expression</li>
-                    <li><i class="fab fa-react"></i> React</li>
                     <li><i class="fab fa-react"></i> React Native</li>
-                    <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                    <li><i class="fas fa-code"></i> Regular Expression</li>
                     <li><i class="fab fa-java"></i> Spring</li>
                     <li><i class="fab fa-java"></i> Spring Boot</li>
                     <li><i class="fab fa-java"></i> Hibernate</li>
-                    <li><i class="fab fa-css3"></i> Tailwind CSS</li>
+                    
                     <li><i class="fab fa-java"></i> Maven</li>
                 </ul>
             </div>
@@ -315,13 +323,12 @@
         </div>
 
     </section>
-
-  
+</section>
 
 </main>
 
 <footer>
-    <p>© 2024 Kavishka Indeepa. All rights reserved.</p>
+    <p class="text-sm">© 2024 Kavishka Indeepa. All rights reserved.</p>
 </footer>
 
 <div id="loader">
@@ -339,35 +346,17 @@
 
 // modes
 
-const themeToggle = document.getElementById("theme-toggle");
+const toggle = document.getElementById('theme-toggle');
+const body = document.body;
 
-
-const elementsToSwitch = document.querySelectorAll(".switch-theme");
-
-
-themeToggle.addEventListener("click", function () {
-    elementsToSwitch.forEach((element) => {
-        element.classList.toggle("light-mode");
-        element.classList.toggle("dark-mode");
-    });
-
-   
-    const lightModeIcon = document.getElementById("light-mode-icon");
-    const darkModeIcon = document.getElementById("dark-mode-icon");
-    lightModeIcon.style.display = lightModeIcon.style.display === "none" ? "inline" : "none";
-    darkModeIcon.style.display = darkModeIcon.style.display === "none" ? "inline" : "none";
-
-   
-    const body = document.body;
-    if (body.classList.contains("dark-mode")) {
-        body.style.backgroundColor = "#262626"; // Dark background color
-        body.style.color = "#ffffff"; // White text color
-
-    } else {
-        body.style.backgroundColor = "#ffffff"; // Light background color
-        body.style.color = "#000000"; // Black text color
-    }
+toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    document.getElementById('light-mode-icon').style.display = isDarkMode ? 'none' : 'block';
+    document.getElementById('dark-mode-icon').style.display = isDarkMode ? 'block' : 'none';
 });
+
+
 
 
 

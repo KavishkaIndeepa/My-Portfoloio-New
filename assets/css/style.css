@@ -19,9 +19,16 @@ header {
     width: 100%;
     top: 0;
     z-index: 50;
-    transition: background-color 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition effect */
 }
 
+header.hidden {
+    transform: translateY(-100%); /* Slide header out of view */
+}
+
+header h1{
+    padding-bottom: 10px;
+}
 .nav-div {
     display: flex;
     justify-content: center;
@@ -62,8 +69,8 @@ header {
     /* top: 30vh; */
     max-width: 600px;
     margin: 0 auto;
-    box-shadow: 4px 1px 4px 0px black;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value to control darkness */
+    box-shadow: 4px 1px 4px 0px rgb(37, 37, 37);
+    background-color: rgba(37, 37, 37, 0.7); /* Adjust the alpha value to control darkness */
     padding: 20px; /* Add padding to make text more readable */
     border-radius: 10px;
 }
@@ -172,6 +179,11 @@ header {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.education h2{
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
 
 .details {
     display: grid;
@@ -222,6 +234,12 @@ h2 {
     text-align: center;
 }
 
+.section-title{
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
 .row {
     display: flex;
     justify-content: space-around;
@@ -246,6 +264,10 @@ h2 {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 10px;
+}
+
+.skills__tag{
+    padding: 10px;
 }
 
 .skills__p {
@@ -352,6 +374,7 @@ h2 {
 .Project-name {
     margin-top: 20px;
     color: #ffffff;
+    font-size: 2em;
 }
 
 .blob-c {
@@ -548,6 +571,12 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form h2{
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
 form {
     display: grid;
     gap: 20px;
@@ -565,7 +594,7 @@ textarea {
     border-radius: 5px;
 }
 
-button {
+.contact-button {
     background-color: #3498db;
     color: #fff;
     padding: 10px 20px;
@@ -574,7 +603,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.contact-button:hover {
     background-color: #555;
 }
 
@@ -600,10 +629,11 @@ button:hover {
 /* footer */
 
 footer {
-    background-color: rgba(25, 24, 24, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
     padding: 20px;
+    margin-top: 10px;
 }
 
 /* loader */

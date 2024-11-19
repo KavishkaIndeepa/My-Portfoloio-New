@@ -25,6 +25,9 @@
 
 </head>
 <body>
+    <div id="loader">
+        <div></div>
+    </div>
 <header>
     <h1>My-Portfolio</h1>
     <div class="nav-div">
@@ -298,7 +301,7 @@
             <label for="message">Your Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <button class="contact-button" type="submit">Send Message</button>
         </form>
 
         <div class="social-icons-contact">
@@ -331,9 +334,7 @@
     <p class="text-sm">© 2024 Kavishka Indeepa. All rights reserved.</p>
 </footer>
 
-<div id="loader">
-    <div></div>
-</div>
+
 
 
 <script>
@@ -356,7 +357,23 @@ toggle.addEventListener('click', () => {
     document.getElementById('dark-mode-icon').style.display = isDarkMode ? 'block' : 'none';
 });
 
+// header hide 
+let lastScrollY = window.scrollY;
+const header = document.querySelector('header');
 
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        header.classList.add('hidden');
+    } else {
+        // Scrolling up
+        header.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
+});
 
 
 
